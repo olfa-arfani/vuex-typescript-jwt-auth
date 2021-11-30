@@ -1,13 +1,14 @@
 <template>
   <div id="app">
     <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <a href class="navbar-brand" @click.prevent>bezKoder</a>
+      <a href class="navbar-brand" @click.prevent>Demo </a>
       <div class="navbar-nav mr-auto">
         <li class="nav-item">
           <router-link to="/home" class="nav-link">
             <font-awesome-icon icon="home" /> Home
           </router-link>
         </li>
+
         <li v-if="showAdminBoard" class="nav-item">
           <router-link to="/admin" class="nav-link">Admin Board</router-link>
         </li>
@@ -17,6 +18,16 @@
         <li class="nav-item">
           <router-link v-if="currentUser" to="/user" class="nav-link"
             >User</router-link
+          >
+        </li>
+        <li class="nav-item">
+          <router-link v-if="currentUser" to="/company" class="nav-link"
+            >Company List</router-link
+          >
+        </li>
+        <li class="nav-item">
+          <router-link v-if="currentUser" to="/addCompany" class="nav-link"
+            >Company add</router-link
           >
         </li>
       </div>

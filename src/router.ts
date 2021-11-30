@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from '@/components/Home.vue';
+import Company from '@/components/CompaniesList.vue';
+import CompanyAdd from '@/components/AddCompany.vue';
 import Login from '@/components/Login.vue';
 import Register from '@/components/Register.vue';
 
@@ -11,6 +13,16 @@ const routes: Array<RouteConfig> = [
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/company',
+    name: 'CompaniesList',
+    component: Company
+  },
+  {
+    path: '/addCompany',
+    name: 'Company Add',
+    component: CompanyAdd
   },
   {
     path: '/home',
